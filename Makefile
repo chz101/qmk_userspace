@@ -1,6 +1,6 @@
 .SILENT:
 
-MAKEFLAGS += --no-print-directory
+MAKEFLAGS += --no-print-directory -e CONVERT_TO=liatris
 
 QMK_USERSPACE := $(patsubst %/,%,$(dir $(shell realpath "$(lastword $(MAKEFILE_LIST))")))
 ifeq ($(QMK_USERSPACE),)
